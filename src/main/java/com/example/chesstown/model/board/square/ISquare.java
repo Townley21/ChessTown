@@ -7,11 +7,12 @@ import java.util.Optional;
 
 public interface ISquare
 {
-    IPosition getPosition();
+    int getRank();
+    int getFile();
     Optional<IPiece> getPiece();
     void setPiece(IPiece piece);
     default boolean isBackRank()
     {
-        return getPosition().getX() == 0 || getPosition().getX() == 7;
+        return getRank() == 0 || getRank() == 7;
     }
 }

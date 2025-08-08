@@ -7,19 +7,27 @@ import java.util.Optional;
 
 public class Square implements ISquare
 {
-    private final IPosition position;
+    private final int x;
+    private final int y;
     private IPiece piece;
 
-    public Square(IPosition position, IPiece piece)
+    public Square(int x, int y, IPiece piece)
     {
-        this.position = position;
+        this.x = x;
+        this.y = y;
         this.piece = piece;
     }
 
     @Override
-    public IPosition getPosition()
+    public int getRank()
     {
-        return position;
+        return x;
+    }
+
+    @Override
+    public int getFile()
+    {
+        return y;
     }
 
     @Override

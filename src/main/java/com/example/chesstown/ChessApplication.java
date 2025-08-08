@@ -20,7 +20,7 @@ public class ChessApplication extends Application
         ChessBoardController controller = new ChessBoardController(board, view);
 
         Scene scene = new Scene(view.getRoot(), 640, 640);
-        stage.setTitle("Chess");
+        stage.setTitle("Chess Engine");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
